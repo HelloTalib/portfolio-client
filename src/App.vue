@@ -993,7 +993,10 @@ svg{
 .footer-para{display:none;}
 .showcase { flex-direction:column;}
 .showcase-logo{ height:60vw; }
-h1{ font-size:2.8em; width:260px; padding:0; display:none;}
+h1{ font-size:2.8em; width:260px; margin:0 0 0 0; display:block;}
+.showcase-column-1 {
+  padding-top:3em;
+}
 
 .toggle-menu { display:block;}
 .profile-img{ height:60vw; margin-left:0;margin:auto; border-radius:300px; border:1px solid #ccc;margin-bottom: 1em; }

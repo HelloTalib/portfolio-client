@@ -63,6 +63,7 @@ export default {
 
 <style lang="css">
 
+
 @media(max-width:768px){
 /* .navbar {
   border-bottom:1px solid #ccc;

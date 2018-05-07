@@ -11,7 +11,7 @@
         distance: '200px',
         mobile: true
       }">
-      <h1>Developer</h1>
+      <h1 class="dev">Developer</h1>
     </div>
     </div>
     <div class="showcase-column-2">
@@ -27,7 +27,7 @@
       distance: '200px',
       mobile: true,
     }">
-      <h1>Designer</h1>
+      <h1 class="design">Designer</h1>
     </div>
     </div>
   </div>

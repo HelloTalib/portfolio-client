@@ -84,9 +84,9 @@ export default {
 
 .vector-2, .vector-3, .vector-4, .vector-5 {
   position:absolute;
-  top:15%;
+  top:17%;
   left:18%;
-  height:20%;
+  height:17%;
   display:flex;
   min-width:270px;
 }
@@ -151,8 +151,9 @@ export default {
     left:18%;
     height:20%;
     display:flex;
-    min-width:270px;
+    min-width:240px;
   }
+
 
   .vector-1 {
     padding: 4em 0;
@@ -166,6 +167,10 @@ export default {
 }
 
 @media(max-width:414px){
+  #content {
+    overflow-x:hidden;
+    width:100%;
+  }
   .vector-2, .vector-3, .vector-4, .vector-5 {
     position:absolute;
     top:3.25%;
