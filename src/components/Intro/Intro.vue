@@ -1,5 +1,5 @@
 <template lang="html">
-  <div>
+  <div class="overflowxy">
   <div class="flex-container-space ha">
   <div class="col-2">
     <img src="./../../assets/JB2019.svg" class="img-logo-2"   alt=""/>
@@ -167,7 +167,10 @@ text-align:center;
   border-radius:40px;
   border:none;
   margin:auto;
-
 }
+
+.overflowxy {
+    overflow: hidden !important;
+  }
 
 </style>

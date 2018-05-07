@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="overflow">
   <div class="custom">
     <navbar v-bind:navbarHome="navbarHome"
             v-bind:navbarLogo="navbarLogo"
@@ -61,6 +61,10 @@ background-size:50px 50px;
   margin:auto;
   display:flex;
   padding:3em 0;
+}
+
+.overflow {
+  overflow-x: hidden !important;
 }
 
 

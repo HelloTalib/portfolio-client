@@ -1,5 +1,5 @@
 <template lang="html">
-  <div>
+  <div class="overflow">
   <div class="custom-color">
   <navbar/>
   <br><br>
@@ -119,6 +119,11 @@ export default {
   flex-wrap:wrap;
   margin:0;
 }
+
+
+.overflow {
+    overflow-x: hidden !important;
+  }
 
 
 </style>

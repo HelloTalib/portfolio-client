@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="">
+  <div class="overflow">
     <navbar v-bind="styling"/>
     <br><br><br>
     <div class="portfolio-container">
@@ -45,7 +45,9 @@ export default {
 
 </script>
 
-<style lang="css" scoped>
-
+<style lang="css">
+.overflow {
+    overflow-x: hidden !important;
+  }
 
 </style>
