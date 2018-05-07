@@ -82,6 +82,14 @@ export default {
 
 <style>
 
+.vector-2, .vector-3, .vector-4, .vector-5 {
+  position:absolute;
+  top:15%;
+  left:18%;
+  height:20%;
+  display:flex;
+  min-width:270px;
+}
 
 .vector-1 {
   margin:auto;
@@ -89,29 +97,7 @@ export default {
   min-width:270px;
 }
 
-.vector-2{
-  margin:-60vh auto 50vh auto;
-  display:block;
-  min-width:270px;
-}
 
-.vector-3 {
-  margin:-83vh auto 60vh auto;
-  display:block;
-  min-width:270px;
-}
-
-.vector-4 {
-  margin:-93vh auto 70vh auto;
-  display:block;
-  min-width:270px;
-}
-
-.vector-5 {
-  margin:-115vh auto 80vh auto;
-  display:block;
-  min-width:270px;
-}
 
 /* .node-3{
   stroke:#111;
@@ -159,22 +145,38 @@ export default {
 }
 
 @media(max-width:768px){
-  #content {
-    display:none;
+  .vector-2, .vector-3, .vector-4, .vector-5 {
+    position:absolute;
+    top:5.5%;
+    left:18%;
+    height:20%;
+    display:flex;
+    min-width:270px;
   }
 
-  .mobile-only {
-    display:block;
+  .vector-1 {
+    padding: 4em 0;
     margin:auto;
+    display:block;
+    min-width:270px;
   }
+
 
 
 }
 
+@media(max-width:414px){
+  .vector-2, .vector-3, .vector-4, .vector-5 {
+    position:absolute;
+    top:3.25%;
+    left:18%;
+    height:20%;
+    display:flex;
+    min-width:270px;
+  }
 
-/* .cls-1 {
+}
 
-  stroke:none;
-} */
+
 
 </style>
