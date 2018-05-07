@@ -1,4 +1,5 @@
 <template lang="html">
+<div>
   <div id="content">
   <svg xmlns="http://www.w3.org/2000/svg" class="vector-1" viewBox="0 0 368.53 670.42">
     <linearGradient id="logo-gradient" x1="50%" y1="40%" x2="50%" y2="60%" >
@@ -42,6 +43,10 @@
   <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>
   <g><path class="node-4" d="M407.2,500h185.6L500,304.5L407.2,500z"/><path class="node-4" d="M500,10L10,185l100.9,595L500,990l388.8-210L990,185L500,10z M692.5,710l-58.2-122.5H365.7L307.5,710H220L500,97.5L780,710H692.5z"/></g>
   </svg>
+</div>
+<div class="mobile-only">
+  <img src="./../../assets/photo1.svg" class="mobile-only-logo" height="500"/>
+</div>
 </div>
 </template>
 
@@ -149,10 +154,21 @@ export default {
   animation: dash 8s linear infinite alternate;
 }
 
+.mobile-only {
+  display:none;
+}
+
 @media(max-width:768px){
-  .vector-2, .vector-3{
+  #content {
     display:none;
   }
+
+  .mobile-only {
+    display:block;
+    margin:auto;
+  }
+
+
 }
 
 

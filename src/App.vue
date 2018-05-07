@@ -17,6 +17,8 @@ export default {
 </script>
 
 <style>
+
+
 body {
   margin: 0;
   position:relative;
@@ -25,6 +27,10 @@ body {
   display:flex;
   min-height: 100vh;
   flex-direction:column;
+  overflow-x: hidden !important;
+}
+
+#app {
   overflow-x: hidden !important;
 }
 
