@@ -1,5 +1,9 @@
 <template lang="html">
-    <div  class="card-form-1" id="map"></div>
+    <div class="one-half column">
+    <div class="card-illustration-2">
+    <div id="map"></div>
+    </div>
+    </div>
 </template>
 
 <script>
@@ -7,96 +11,184 @@ export default {
   name: 'google-map',
   methods: {
     initMap() {
+    const styledMapType = new google.maps.StyledMapType([
+      {
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#f5f5f5"
+          }
+        ]
+      },
+      {
+        "elementType": "labels.icon",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#616161"
+          }
+        ]
+      },
+      {
+        "elementType": "labels.text.stroke",
+        "stylers": [
+          {
+            "color": "#f5f5f5"
+          }
+        ]
+      },
+      {
+        "featureType": "administrative.land_parcel",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#bdbdbd"
+          }
+        ]
+      },
+      {
+        "featureType": "poi",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#eeeeee"
+          }
+        ]
+      },
+      {
+        "featureType": "poi",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#757575"
+          }
+        ]
+      },
+      {
+        "featureType": "poi.park",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#e5e5e5"
+          }
+        ]
+      },
+      {
+        "featureType": "poi.park",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#9e9e9e"
+          }
+        ]
+      },
+      {
+        "featureType": "road",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#ffffff"
+          }
+        ]
+      },
+      {
+        "featureType": "road.arterial",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#757575"
+          }
+        ]
+      },
+      {
+        "featureType": "road.highway",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#dadada"
+          }
+        ]
+      },
+      {
+        "featureType": "road.highway",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#616161"
+          }
+        ]
+      },
+      {
+        "featureType": "road.local",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#9e9e9e"
+          }
+        ]
+      },
+      {
+        "featureType": "transit.line",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#e5e5e5"
+          }
+        ]
+      },
+      {
+        "featureType": "transit.station",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#eeeeee"
+          }
+        ]
+      },
+      {
+        "featureType": "water",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#c9c9c9"
+          }
+        ]
+      },
+      {
+        "featureType": "water",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#9e9e9e"
+          }
+        ]
+      }
+    ],
+  {name: 'Styled Map'});
         const uluru = {lat: 41.8818, lng: -87.62317};
         const map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 10,
+          zoom: 12,
           center: uluru,
-          styles: [
-             {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
-             {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
-             {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
-             {
-               featureType: 'administrative.locality',
-               elementType: 'labels.text.fill',
-               stylers: [{color: '#d59563'}]
-             },
-             {
-               featureType: 'poi',
-               elementType: 'labels.text.fill',
-               stylers: [{color: '#d59563'}]
-             },
-             {
-               featureType: 'poi.park',
-               elementType: 'geometry',
-               stylers: [{color: '#263c3f'}]
-             },
-             {
-               featureType: 'poi.park',
-               elementType: 'labels.text.fill',
-               stylers: [{color: '#6b9a76'}]
-             },
-             {
-               featureType: 'road',
-               elementType: 'geometry',
-               stylers: [{color: '#38414e'}]
-             },
-             {
-               featureType: 'road',
-               elementType: 'geometry.stroke',
-               stylers: [{color: '#212a37'}]
-             },
-             {
-               featureType: 'road',
-               elementType: 'labels.text.fill',
-               stylers: [{color: '#9ca5b3'}]
-             },
-             {
-               featureType: 'road.highway',
-               elementType: 'geometry',
-               stylers: [{color: '#746855'}]
-             },
-             {
-               featureType: 'road.highway',
-               elementType: 'geometry.stroke',
-               stylers: [{color: '#1f2835'}]
-             },
-             {
-               featureType: 'road.highway',
-               elementType: 'labels.text.fill',
-               stylers: [{color: '#f3d19c'}]
-             },
-             {
-               featureType: 'transit',
-               elementType: 'geometry',
-               stylers: [{color: '#2f3948'}]
-             },
-             {
-               featureType: 'transit.station',
-               elementType: 'labels.text.fill',
-               stylers: [{color: '#d59563'}]
-             },
-             {
-               featureType: 'water',
-               elementType: 'geometry',
-               stylers: [{color: '#17263c'}]
-             },
-             {
-               featureType: 'water',
-               elementType: 'labels.text.fill',
-               stylers: [{color: '#515c6d'}]
-             },
-             {
-               featureType: 'water',
-               elementType: 'labels.text.stroke',
-               stylers: [{color: '#17263c'}]
-             }
-           ]
+          mapTypeControlOptions: {
+              mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain',
+                 'styled_map']
+               }
         });
         let marker = new google.maps.Marker({
           position: uluru,
           map: map
 
         });
+
+        map.mapTypes.set('styled_map', styledMapType);
+        map.setMapTypeId('styled_map');
       }
   },
   mounted(){
@@ -107,31 +199,22 @@ export default {
 </script>
 
 <style lang="css" scoped>
-.card-form-1 {
-  width: 35vw;
-  height:450px;
+
+.card-illustration-2 {
+  background: #f2f2f2;
+  background-size: cover;
+  background-origin: border-box;
   border-radius:10px;
-  margin:2em 2vw;
-  padding:0 0 2em 0;
-  box-shadow:0px 3px 45px 9px rgba(0,0,0,.15)
+  box-shadow:0px 3px 45px 9px rgba(0,0,0,.08);
+  margin:2em 0vw;
+  z-index:2;
+  height:460px;
+  /* width:935px; */
+  overflow:hidden;
 }
 
 #map {
-  height: 450px;
-  margin:2em 2em;
-      }
-
-
-      @media(max-width:768px){
-       .card-form-1 {
-         width: 84vw;
-       }
-      }
-
-      @media(max-width:414px){
-       .card-form-1 {
-         width: 80vw;
-       }
+  height: inherit;
       }
 
 </style>

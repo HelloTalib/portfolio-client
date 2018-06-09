@@ -1,53 +1,57 @@
 <template lang="html">
-  <div class="overflow">
-    <navbar v-bind="styling"/>
-    <br><br><br>
-    <div class="portfolio-container">
-      <h2>Contact</h2>
-    </div>
-    <div class="flex-container-space">
-    <contact-form v-scroll-reveal.reset="{
-      delay: 100,
-      duration: 1500,
-      scale: 1,
-      origin: 'left',
-      distance: '200px',
-      mobile: false
-    }"/>
-    <google-map v-scroll-reveal.reset="{
-      delay: 150,
-      duration: 1500,
-      scale: 1,
-      origin: 'bottom',
-      distance: '200px',
-      mobile: false
-    }"/>
-    </div>
-    <br><br><br><br>
-    <footer-section/>
+  <div class="">
+    <Navbar/>
+    <div class="container">
+    <Page-Header title="Contact" icon="fa fa-envelope"/>
+    <div class="row">
+    <Contact-Form   v-scroll-reveal.reset="{
+        delay: 100,
+        duration: 1000,
+        scale: .8,
+        origin: 'bottom',
+        distance: '300px',
+        mobile: false
+      }"/>
+    <Google-Map  v-scroll-reveal.reset="{
+        delay: 100,
+        duration: 1000,
+        scale: .8,
+        origin: 'bottom',
+        distance: '300px',
+        mobile: false
+      }"/>/>
   </div>
+  </div>
+  <Footer-Section/>
+</div>
 </template>
 
 <script>
 import Navbar from '@/components/Navbar/Navbar'
+import PageHeader from '@/components/Page-Header/PageHeader'
 import FooterSection from '@/components/Footer/FooterSection'
-import ContactForm from '@/components/Contact/ContactForm'
-import GoogleMap from'@/components/Contact/GoogleMap'
+import ContactForm from './ContactForm'
+import GoogleMap from './GoogleMap.vue'
 export default {
-  name: 'contact',
-  components: { Navbar, FooterSection, ContactForm, GoogleMap  },
-  data(){
-    return {
-      styling: {backgroundColor: 'transparent', color:'#181818'}
-    }
-  }
-}
+  // AIzaSyAEr9BOREltppvZH0KnJ6gpUqPOmN08i4E
+  components: { PageHeader, Navbar, ContactForm, GoogleMap, FooterSection },
+  name: 'Contact',
 
+}
 </script>
 
 <style lang="css">
-.overflow {
-    overflow-x: hidden !important;
-  }
+
+textarea {
+  height:20vh;
+}
+
+.form-column {
+  display:flex;
+}
+
+.container {
+  width:90%;
+}
 
 </style>

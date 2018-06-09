@@ -1,67 +1,97 @@
 <template lang="html">
-  <div id="projects" class="row space">
-  <div class="card" v-for="project in projects" >
-    <img :src="getImg(project.img)" class="card-img"/>
-    <div class="card-body">
-      <span class="card-flex">
-      <h3>{{ project.title }}</h3><a  href="https://github.com/JBooker10/Fitness-App-2018" target="_blank"><i class="fa fa-github card-link" aria-hidden="true"></i></a>
-      </span>
-      <span class="card-p">
-        {{ project.desc }}
-    </span>
-    <a v-bind:href="`https://${project.link}`" target="_blank" class="btn-primary">View Project</a>
+  <div class="six columns">
+    <div class="card">
+      <a v-bind:href="link" target="_blank">
+      <img :src="getImg(img)" class="card-img"/>
+      </a>
+      <div class="card-body">
+        <span class="card-flex">
+          <span class="card-header-left">
+            <h4>{{ title }}</h4>
+            <small><p class="p-header">{{ stack }}</p></small>
+          </span><a  v-bind:href="github" target="_blank"><i class="fa fa-github card-link" aria-hidden="true"></i></a>
+          </span>
+          <span class="card-p">
+            {{ description }}
+            </span>
+      </div>
     </div>
   </div>
-</div>
 </template>
 
 <script>
-
 export default {
-  props: ['projects'],
-  name: 'card',
+  props: [ "title", "stack", "img", "github", "link", "description"],
+  name: 'Card',
   methods: {
     getImg(name){
       const image = require(`./../../assets/${name}`)
-      return image
-    },
+        return image;
+      },
     getLink(name){
       const url = require(`${name}`)
       return url
     }
   }
-
 }
 
 </script>
 
 <style lang="css">
-h3 {
-  flex: 1
-}
+
 .card {
-  width: 35vw;
+  min-width:inherit;
   height:auto;
   border-radius:10px;
-  margin:2em 2vw;
-  padding:0 0 2em 0;
-  box-shadow:0px 3px 45px 9px rgba(0,0,0,.15)
+  margin:2em 1vw;
+  box-shadow:0px 3px 45px 9px rgba(0,0,0,.1);
+  background:white;
+  overflow:hidden;
 }
-
 .card-flex {
   display:flex;
+  align-content:space-between;
+  margin-bottom:5px;
 }
 
-@media(max-width:768px){
- .card {
-   width: 84vw;
- }
+.card-img {
+  width:100%;
+  cursor:pointer;
+  z-index:-2;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  overflow: hidden;
 }
 
-@media(max-width:414px){
- .card {
-   width: 80vw;
- }
+.p-header {
+  padding:0;
+  text-align:left;
+  margin-top:-27px;
+  color: #888;
+}
+
+.card-p {
+  color:#888;
+}
+
+.card-img:hover{
+  filter:none;
+}
+.card-body{
+  margin:2em 2em;
+}
+.card-p {
+  color:#888;
+}
+
+.card-link {
+  margin:.33em 0 !important;
+  font-size:1.4em !important;
+  color: #181818 !important;
+}
+
+.card-header-left {
+  flex:1;
 }
 
 

@@ -3,7 +3,6 @@ import Router from 'vue-router'
 import Home from '@/components/Home/Home'
 import Portfolio from '@/components/Portfolio/Portfolio'
 import Intro from '@/components/Intro/Intro'
-import About from '@/components/Home/About'
 import Contact from '@/components/Contact/Contact'
 import NotFound from '@/components/ErrorPage/NotFound'
 import Posts from '@/components/Post/Posts'
@@ -43,11 +42,6 @@ export default new Router({
       path: '/home',
       name: 'home',
       component: Home
-    },
-    {
-      path: '/about',
-      name: 'about',
-      component: About
     },
     {
       path: '/portfolio',
