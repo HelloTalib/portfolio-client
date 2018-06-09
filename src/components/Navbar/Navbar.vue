@@ -5,7 +5,7 @@
     <div class="container">
       <div class="responsive-nav">
         <div class="navbar-brand">
-          <div class="navbar-link nav-home">JaredBookr</div>
+          <div class="navbar-link nav-home">Jaredbookr</div>
         </div>
         <div class="toggle-menu active" id="navbarToggle"  @click="navbarScroll">
         <div id="nav-icon3" v-bind:class="[ isActive ? '' : 'open' ]" @click="">
@@ -78,6 +78,7 @@ export default {
     top:0;
     margin-bottom:1em;
 }
+
 
 
 @media(max-width:750) {
