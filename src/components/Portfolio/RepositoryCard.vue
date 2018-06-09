@@ -47,7 +47,7 @@ export default {
     },
   filters: {
     moment: function (date) {
-      return moment(date).endOf('hour').fromNow(); ;
+      return moment(date).startOf('hour').fromNow(); ;
     }
   }
 
