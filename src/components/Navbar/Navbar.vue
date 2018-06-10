@@ -5,7 +5,7 @@
     <div class="container">
       <div class="responsive-nav">
         <div class="navbar-brand">
-          <div class="navbar-link nav-home" v-bind:style="navlinkdark">Jaredbookr</div>
+          <router-link class="navbar-link nav-home" v-bind:style="navlinkdark" to="/home">Jaredbookr</router-link>
         </div>
         <div class="toggle-menu active" id="navbarToggle"  @click="navbarScroll">
         <div id="nav-icon3" v-bind:class="[ isActive ? '' : 'open' ]" @click="">
@@ -34,7 +34,7 @@
 <script>
 export default {
   name: 'Navbar',
-  props: ['navbardark', 'navlinkdark'],
+  props: ['navbardark', 'navlinkdark', 'navbarToggle'],
   data() {
     return {
       isActive: true

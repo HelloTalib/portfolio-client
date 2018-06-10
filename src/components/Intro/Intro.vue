@@ -101,7 +101,7 @@ text-align:center;
 .loading-bar {
   width:100%;
   height:5px;
-  background:#111;
+  background:rgba(0,0,0,.1);
   bottom:0;
   position:fixed;
   margin:0;
@@ -126,7 +126,7 @@ text-align:center;
 .loading {
   width:0%;
   left:0;
-  height:5px;
+  height:3px;
   z-index:2;
 
   background: linear-gradient(to right, rgba(255,35,35,1) 0%, rgba(255,35,72,1) 63%);
