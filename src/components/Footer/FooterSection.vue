@@ -1,12 +1,12 @@
 <template lang="html">
   <div>
   <footer class="js-section3" id="footer">
-  <div class="copyright-footer">
+  <div class="copyright-footer" v-bind:style="footerdark">
       <p class="footer-text"> &copy 2018 <a class="link" href="http://jaredbookr.io">Jaredbookr</a> | built and designed by: Jared Booker </p>
-      <p>  <a href="https://github.com/JBooker10" target="_blank"><i class="fa fa-github footer-icon" aria-hidden="true"></i></a>
-       <a href="https://www.linkedin.com/in/jaredbooker1/" target="_blank"><i class="fa fa-linkedin footer-icon" aria-hidden="true"></i></a>
-       <a href="https://codepen.io/Jaredbooker/" target="_blank"><i class="fa fa-codepen footer-icon" aria-hidden="true"></i></a>
-       <a href="#" target="_blank"><i class="fa fa-twitter footer-icon" aria-hidden="true"></i></a></p>
+      <p>  <a href="https://github.com/JBooker10" target="_blank"><i class="fa fa-github footer-icon" aria-hidden="true" v-bind:style="icondark"></i></a>
+       <a href="https://www.linkedin.com/in/jaredbooker1/" target="_blank"><i class="fa fa-linkedin footer-icon" aria-hidden="true" v-bind:style="icondark"></i></a>
+       <a href="https://codepen.io/Jaredbooker/" target="_blank"><i class="fa fa-codepen footer-icon" aria-hidden="true" v-bind:style="icondark"></i></a>
+       <a href="#" target="_blank"><i class="fa fa-twitter footer-icon" aria-hidden="true" v-bind:style="icondark"></i></a></p>
   </div>
 </footer>
 </div>
@@ -14,6 +14,7 @@
 
 <script>
 export default {
+  props: ['footerdark', 'icondark'],
   name: 'footer-section'
 }
 </script>
@@ -41,7 +42,7 @@ footer {
 }
 .copyright-footer{
   padding:10px;
-  background-color:#fcfcfc;
+  background:#fcfcfc;
   /* background:url('./assets/okay2.png'); */
   border-top:1px solid rgba(0,0,0,.15);
 }

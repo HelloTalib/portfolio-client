@@ -1,11 +1,11 @@
 <template lang="html">
 <div>
   <div class="navbar-spacer"></div>
-  <nav class="navbar">
+  <nav class="navbar" v-bind:style="navbardark">
     <div class="container">
       <div class="responsive-nav">
         <div class="navbar-brand">
-          <div class="navbar-link nav-home">Jaredbookr</div>
+          <div class="navbar-link nav-home" v-bind:style="navlinkdark">Jaredbookr</div>
         </div>
         <div class="toggle-menu active" id="navbarToggle"  @click="navbarScroll">
         <div id="nav-icon3" v-bind:class="[ isActive ? '' : 'open' ]" @click="">
@@ -18,10 +18,10 @@
       </div>
     </div>
         <ul class="navbar-list">
-          <li class="navbar-item"><router-link class="navbar-link" to="/home">Home</router-link></li>
-          <li class="navbar-item"><router-link class="navbar-link" to="/portfolio">Portfolio</router-link></li>
+          <li class="navbar-item"><router-link class="navbar-link" v-bind:style="navlinkdark" to="/home">Home</router-link></li>
+          <li class="navbar-item"><router-link class="navbar-link" v-bind:style="navlinkdark" to="/portfolio">Portfolio</router-link></li>
           <li class="navbar-item">
-            <router-link class="navbar-link" to="/contact">Contact</router-link>
+            <router-link class="navbar-link" v-bind:style="navlinkdark" to="/contact">Contact</router-link>
           </li>
         </ul>
        <div>
@@ -34,7 +34,7 @@
 <script>
 export default {
   name: 'Navbar',
-  props: ['navbarHome', 'navbarLogo', 'navbarBackground', 'navbarToggle'],
+  props: ['navbardark', 'navlinkdark'],
   data() {
     return {
       isActive: true
@@ -78,7 +78,6 @@ export default {
     top:0;
     margin-bottom:1em;
 }
-
 
 
 @media(max-width:750) {

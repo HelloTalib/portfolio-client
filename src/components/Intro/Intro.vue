@@ -1,11 +1,7 @@
 <template lang="html">
   <div class="overflowxy">
-  <div class="flex-container-space ha">
-  <div class="col-2">
-    <img src="./../../assets/JB2019.svg" class="img-logo-2"   alt=""/>
-    <!-- <span class="countdown" id="countdown">{{loading}}</span> -->
-    <!-- <p>Loading...</p> -->
-  </div>
+  <div class=" ha">
+    <span class="countdown" id="countdown">{{loading}}</span>
     <span class="loading-bar"/>
       <span class="loading" id="load"></span>
     </span>
@@ -51,9 +47,8 @@ export default {
   }
 },
   mounted(){
-    this.loader()
+    this.countdown()
 
-    const countdown = document.getElementById('countdown')
     TweenLite.to('.img-logo-2', 1, {delay:2, opacity:0 })
     setTimeout(() => this.$router.push({ name: 'home' }), 3000)
   },
@@ -62,17 +57,40 @@ export default {
 
 <style lang="css" scoped>
 
-svg {
-margin:auto;
-display:block;
-padding:2em;
-/* filter:drop-shadow(3px 4px 8px rgba(0,0,0,.5)); */
+.img-head {
+position:absolute;
+left:39%;
+top:10%;
+}
+
+.cls-1,.cls-2{
+  fill:none;
+  stroke-width:61px;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 10s linear forwards;}
+
+.cls-1{
+  stroke-linecap:square;
+  stroke-linejoin:round;
+  stroke:url(#linear-gradient);
+}
+.cls-2{
+  stroke-miterlimit:10;
+  stroke:url(#linear-gradient-2);
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 
 
 .col-2 p {
 text-align:center;
+
 }
 
 .col-2 h1 {
@@ -82,7 +100,7 @@ text-align:center;
 
 .loading-bar {
   width:100%;
-  height:10px;
+  height:5px;
   background:#111;
   bottom:0;
   position:fixed;
@@ -90,7 +108,8 @@ text-align:center;
 }
 
 .img-logo-2 {
-  height:200px;
+  margin-top:20vh;
+  height:400px;
   display:block;
   margin:auto;
 }
@@ -105,9 +124,9 @@ text-align:center;
 }
 
 .loading {
-  width:5%;
+  width:0%;
   left:0;
-  height:10px;
+  height:5px;
   z-index:2;
 
   background: linear-gradient(to right, rgba(255,35,35,1) 0%, rgba(255,35,72,1) 63%);
@@ -132,12 +151,12 @@ text-align:center;
 
 .countdown {
   font-size: 20em;
-  font-weight: 900;
+  font-family: Rajdhani;
+  font-weight:600;
   fill:#181818;
-  color:#000;
+  color:rgba(0,0,0,.1);
   display:block;
-  text-align:center;
-  margin:0;
+  margin:auto;
 }
 
 .p-intro {
@@ -154,7 +173,10 @@ text-align:center;
 
 .ha {
   height: 100vh;
-  background:#000;
+  display:flex;
+  flex-direction: column;
+  align-content: center;
+  background:#111;
   /* background: radial-gradient(circle at top right, #111111 0%, #000000 100%); */
   /* background:#111; */
 }
