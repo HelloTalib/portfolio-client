@@ -1,6 +1,11 @@
 <template lang="html">
   <div class="six columns">
-    <a  class="card-full-link" href="http://secret-gorge-71321.herokuapp.com/" target="_blank"><div class="card-illustration-3" :style="{ backgroundImage: 'url(' + require('@/assets/108.jpeg') + ')' }">
+    <a  class="card-full-link" href="http://secret-gorge-71321.herokuapp.com/" target="_blank"><div class="card-illustration-3" :style="{
+      backgroundImage: 'url(' + require('@/assets/108.jpeg') + ')',
+      animation: 'backgroundScroll 8s linear infinite'
+
+      }"
+      >
       <div class="card-body">
           <img src="./../../assets/color.svg" height="160" class="card-photo"/>
           <h2 class="card-title">Impression</h2>
@@ -41,10 +46,10 @@ export default {
   margin:2em 1vw;
   z-index:2;
   overflow:hidden;
-   -webkit-animation: backgroundScroll 8s linear 1;
+   /* -webkit-animation: backgroundScroll 8s linear 1;
     -webkit-animation-fill-mode: forwards;
     animation: backgroundScroll 8s linear infinite;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards; */
    z-index:2;
  }
 
