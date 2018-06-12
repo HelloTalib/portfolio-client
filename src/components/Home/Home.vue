@@ -95,7 +95,7 @@ font-family: 'Rajdhani', sans-serif;
 .cls-1{
   stroke:url(#logo-gradient);
   fill:none;
-  stroke-width:2px;
+  stroke-width:4px;
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
   animation: dash 7s alternate infinite;
@@ -118,7 +118,7 @@ font-family: 'Rajdhani', sans-serif;
 
 
 .logo {
-  filter:drop-shadow(2px 3px 4px rgba(0,0,0,.7));
+  /* filter:drop-shadow(2px 3px 4px rgba(0,0,0,.7)); */
   display:none;
   margin:auto;
   flex:1;
