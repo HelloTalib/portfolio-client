@@ -25,14 +25,19 @@
                            mobile: false
                           }"/>
     <div class="row">
-      <CardFull v-scroll-reveal.reset="{
-                             delay: 250,
-                             duration: 1000,
-                             scale: .8,
-                             origin: 'bottom',
-                             distance: '100px',
-                             mobile: false
-                            }"/>
+      <Card title="Weather App"
+            stack="REACT • Material Design"
+            img="placeholder-image.jpg"
+            github="https://github.com/JBooker10/weather-app"
+            link="https://weather-app-20181a.herokuapp.com"
+            description="A weather App using an external API from Wunderground to display weather"
+            v-scroll-reveal.reset="{
+              delay: 250,
+              duration: 1000,
+              scale: .8,
+              origin: 'bottom',
+              distance: '100px',
+              mobile: false}"/>
       <Codepen-Card title="Calculator"
                       col="six columns"
                       link="https://codepen.io/Jaredbooker/pen/eGjJKY/"
@@ -60,19 +65,14 @@
               origin: 'bottom',
               distance: '100px',
               mobile: false}"/>
-              <Card title="Weather App"
-                    stack="REACT • Material Design"
-                    img="placeholder-image.jpg"
-                    github="https://github.com/JBooker10/weather-app"
-                    link="https://weather-app-20181a.herokuapp.com"
-                    description="A weather App using an external API from Wunderground to display weather"
-                    v-scroll-reveal.reset="{
-                      delay: 250,
-                      duration: 1000,
-                      scale: .8,
-                      origin: 'bottom',
-                      distance: '100px',
-                      mobile: false}"/>
+      <CardFull v-scroll-reveal.reset="{
+                                     delay: 250,
+                                     duration: 1000,
+                                     scale: .8,
+                                     origin: 'bottom',
+                                     distance: '100px',
+                                     mobile: false
+                                    }"/>
     </div>
   </div>
 </div>

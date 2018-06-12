@@ -2,6 +2,8 @@
   <div class="six columns">
     <a  class="card-full-link" href="http://secret-gorge-71321.herokuapp.com/" target="_blank"><div class="card-illustration-3" :style="{
       backgroundImage: 'url(' + require('@/assets/108.jpeg') + ')',
+      backgroundSize:'125%',
+
       animation: 'backgroundScroll 8s linear infinite'
 
       }"
@@ -10,8 +12,11 @@
           <img src="./../../assets/color.svg" height="160" class="card-photo"/>
           <h2 class="card-title">Impression</h2>
           <p class="card-p-1">A full-stack JavaScript social networking site for creative professionals using React.js, Redux, MongoDB, Express and Node.js.</p>
-
+          <br/>
+          <a href="https://github.com/JBooker10/Impression" target="_blank"><i class="fa fa-github card-link-full" aria-hidden="true"></i></a>
+          <br/>
       </div>
+
     </div></a>
   </div>
 </template>
@@ -46,15 +51,20 @@ export default {
   margin:2em 1vw;
   z-index:2;
   overflow:hidden;
-   /* -webkit-animation: backgroundScroll 8s linear 1;
+   -webkit-animation: backgroundScroll 8s linear 1;
     -webkit-animation-fill-mode: forwards;
     animation: backgroundScroll 8s linear infinite;
-    animation-fill-mode: forwards; */
+    animation-fill-mode: forwards;
    z-index:2;
  }
 
 
  @-webkit-keyframes backgroundScroll {
+     from {background-position: 0 0px;}
+     to {background-position: 0px -100px;}
+ }
+
+ @keyframes backgroundScroll {
      from {background-position: 0 0px;}
      to {background-position: 0px -100px;}
  }
@@ -118,10 +128,12 @@ export default {
   color:#888;
 }
 
-.card-link {
+.card-link-full {
   margin:.33em 0 !important;
   font-size:1.4em !important;
-  color: #181818 !important;
+  color: white !important;
+  float:right;
+  z-index:4px;
 }
 
 .card-header-left {
