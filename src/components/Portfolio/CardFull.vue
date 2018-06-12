@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="six columns">
-    <a  class="card-full-link" href="http://secret-gorge-71321.herokuapp.com/" target="_blank"><div class="card-illustration-3">
+    <a  class="card-full-link" href="http://secret-gorge-71321.herokuapp.com/" target="_blank"><div class="card-illustration-3" :style="{ backgroundImage: 'url(' + require('@/assets/108.jpeg') + ')' }">
       <div class="card-body">
           <img src="./../../assets/color.svg" height="160" class="card-photo"/>
           <h2 class="card-title">Impression</h2>
@@ -32,7 +32,7 @@ export default {
 <style lang="css">
 
 .card-illustration-3 {
-  background: url('./../../assets/108.jpeg');
+  /* background: url('./../../assets/108.jpeg'); */
   background-size:125%;
   filter:contrast(145%);
   background-origin: border-box;
