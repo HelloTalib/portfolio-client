@@ -34,4 +34,10 @@ export default {
   overflow:hidden;
 }
 
+.card-illustration-2:hover {
+  transition: 300ms;
+  transform: scale(1.02);
+    box-shadow:0px 3px 45px 9px rgba(0,0,0,.02);
+}
+
 </style>

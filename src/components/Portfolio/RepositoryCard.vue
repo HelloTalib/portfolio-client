@@ -6,7 +6,7 @@
           <span class="card-flex">
             <span class="card-header-left">
               <h5>Recent Updates</h5>
-              <small><p class="p-header">View Recent Projects from Github</p></small>
+              <small><p class="p-header color ">View Recent Projects with Github</p></small>
             </span><i class="fa fa-clock-o" aria-hidden="true"></i>
           </span>
         </div>
@@ -105,6 +105,10 @@ h6 {
 
 }
 
+.color {
+  color:rgba(255,255,255,.6) !important;
+}
+
 .time {
   background: linear-gradient(45deg, rgba(30,12,62,1) 0%, rgba(255,76,76,1) 73%)
 }
@@ -154,7 +158,7 @@ small {
 }
 
 .list-group-item:first-child {
-  border:none;
+  /* border:none; */
   background: linear-gradient(86deg, rgba(30,12,62,1) 0%, rgba(244,62,88,1) 71%);
 }
 
@@ -166,6 +170,7 @@ small {
   background-color: #111;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-left:none;
+  border-bottom:1px solid rgba(255, 255, 255, 0.1);
   border-right:none;
   color:white !important;
 }

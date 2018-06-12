@@ -44,7 +44,7 @@ export default {
   height:auto;
   border-radius:10px;
   margin:2em 1vw;
-  box-shadow:0px 3px 45px 9px rgba(0,0,0,.1);
+  box-shadow:0px 3px 45px 9px rgba(0,0,0,.08);
   background:white;
   overflow:hidden;
 }
@@ -52,6 +52,12 @@ export default {
   display:flex;
   align-content:space-between;
   margin-bottom:5px;
+}
+
+.card:hover {
+  transition: 300ms;
+  transform: scale(1.02);
+    box-shadow:0px 3px 45px 9px rgba(0,0,0,.02);
 }
 
 .card-img {

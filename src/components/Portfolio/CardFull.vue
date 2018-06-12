@@ -9,8 +9,8 @@
       }"
       >
       <div class="card-body">
-          <img src="./../../assets/color.svg" height="150" class="card-photo"/>
-          <h2 class="card-title">Impression</h2>
+          <img src="./../../assets/color.svg" height="140" class="card-photo"/>
+          <h3 class="card-title">Impression</h3>
           <p class="card-p-1">A full-stack JavaScript social networking site for creative professionals using React.js, Redux, MongoDB, Express and Node.js.</p>
           <br/>
           <a href="https://github.com/JBooker10/Impression" target="_blank"><i class="fa fa-github card-link-full" aria-hidden="true"></i></a>
@@ -58,6 +58,11 @@ export default {
    z-index:2;
  }
 
+.card-illustration-3:hover {
+  transition: 300ms;
+  transform: scale(1.02);
+    box-shadow:0px 3px 45px 9px rgba(0,0,0,.02);
+}
 
  @-webkit-keyframes backgroundScroll {
      from {background-position: 0 0px;}
@@ -75,7 +80,7 @@ export default {
 .card-photo {
   display:block;
   margin:3em auto .5em auto;
-  opacity:.90;
+  opacity:.8;
 
   /* filter:drop-shadow(1px 2px 3px black); */
 }
@@ -83,7 +88,7 @@ export default {
 .card-title {
   color:rgba(255,255,255,.9);
   /* text-shadow: 1px 2px 2px black; */
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-weight: 600;
   text-align:center;
   margin:0;
