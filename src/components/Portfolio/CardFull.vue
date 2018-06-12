@@ -9,7 +9,7 @@
       }"
       >
       <div class="card-body">
-          <img src="./../../assets/color.svg" height="160" class="card-photo"/>
+          <img src="./../../assets/color.svg" height="150" class="card-photo"/>
           <h2 class="card-title">Impression</h2>
           <p class="card-p-1">A full-stack JavaScript social networking site for creative professionals using React.js, Redux, MongoDB, Express and Node.js.</p>
           <br/>
@@ -74,15 +74,15 @@ export default {
 }
 .card-photo {
   display:block;
-  margin:3em auto 1em auto;
-  opacity:.95;
+  margin:3em auto .5em auto;
+  opacity:.90;
 
   /* filter:drop-shadow(1px 2px 3px black); */
 }
 
 .card-title {
   color:rgba(255,255,255,.9);
-  text-shadow: 1px 2px 2px black;
+  /* text-shadow: 1px 2px 2px black; */
   text-transform: uppercase;
   font-weight: 600;
   text-align:center;
