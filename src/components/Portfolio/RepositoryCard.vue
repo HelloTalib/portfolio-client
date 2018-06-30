@@ -6,11 +6,14 @@
           <span class="card-flex">
             <span class="card-header-left">
               <h5>Recent Updates</h5>
-              <small><p class="p-header color ">View Recent Projects with Github</p></small>
+              <small><p class="p-header color ">View Recent Projects on Github</p></small>
             </span><i class="fa fa-clock-o" aria-hidden="true"></i>
           </span>
         </div>
-        <div class="list-group-item " v-for="repo in repositories">
+        <div class="list-group-item " v-for="(repo, i) in repositories.sort(( a, b) => {
+            return new Date(a.updated_at) - new Date(b.updated_at);
+        }).reverse()" :key="repo.id"
+        v-if="repositories && repositories.length > 0 && i <= limit">
           <a class="default" v-bind:href="repo.html_url" target="_blank"><span class="card-flex">
             <span class="card-header-left">
               <h6>{{ repo.name }}</h6>
@@ -24,22 +27,16 @@
 </template>
 
 <script>
-import axios from 'axios';
 import moment from 'moment';
 
 export default {
+  props: ['repositories'],
   name: 'Repository-Card',
   data() {
     return {
-      repositories: null
+      limit: 6
     }
   },
-  mounted(){
-    axios
-      .get('https://api.github.com/users/JBooker10/repos')
-      .then(res => this.repositories = res.data)
-      .catch(err => console.log(err))
-    },
   methods: {
     moment: function () {
         return moment();
@@ -48,7 +45,15 @@ export default {
   filters: {
     moment: function (date) {
       return moment(date).startOf('hour').fromNow(); ;
+    },
+  computed: {
+    sortedItems: function() {
+        this.repositories.sort(( a, b) => {
+            return new Date(a.updated_at) - new Date(b.updated_at);
+        });
+        return this.repositories;
     }
+}
   }
 
 
@@ -68,16 +73,11 @@ export default {
   overflow:hidden;
 }
 
-.color-update {
-}
-
 .default, .default:hover {
   text-decoration: none;
   color:inherit;
+
 }
-
-
-
 
 
 h5 {
@@ -168,9 +168,8 @@ small {
   padding: 0.5rem 2rem;
   margin-bottom: -1px;
   background-color: #111;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, .14);
   border-left:none;
-  border-bottom:1px solid rgba(255, 255, 255, 0.1);
   border-right:none;
   color:white !important;
 }

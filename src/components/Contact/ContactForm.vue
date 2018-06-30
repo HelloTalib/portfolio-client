@@ -28,21 +28,22 @@
                name="phone"
                v-model="phone"
                type="tel"
-               placeholder="000-000-0000">
+               placeholder="123-456-7890">
       </div>
       <div class="one-half column">
         <label for="reason">Reason for contacting</label>
         <select class="u-full-width" name="reason" v-model="reason">
-         <option value="Question">Question</option>
+         <option value="Question" >Question</option>
          <option value="Recruitment">Recruitment</option>
          <option value="Freelance">Freelance</option>
+         <option value="Others">Others</option>
         </select>
       </div>
     </div>
     <label for="message">Message</label>
     <textarea class="u-full-width"
               name="message"
-              placeholder="Hi Jared …"
+              placeholder="Your Message…"
               v-model="message"
               required></textarea>
     <br>

@@ -122,7 +122,8 @@ font-family: 'Rajdhani', sans-serif;
   display:none;
   margin:auto;
   flex:1;
-  height:260;
+  height:340px;
+  width:340px;
 
 }
 

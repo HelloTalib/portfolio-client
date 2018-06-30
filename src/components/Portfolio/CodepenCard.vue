@@ -1,12 +1,13 @@
 <template lang="html">
   <div v-bind:class="col">
   <div class="card-illustration-2">
-  <p data-height="580" data-theme-id="light" v-bind:data-slug-hash="hash" data-default-tab="result" data-user="Jaredbooker" data-embed-version="2" v-bind:data-pen-title="title" class="codepen" >See the Pen <a v-bind:href="link">Wonder Woman Polygon</a> by Jared Booker (<a href="https://codepen.io/Jaredbooker">@Jaredbooker</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+  <p data-height="580" data-theme-id="light" v-bind:data-slug-hash="hash" data-default-tab="result" data-user="Jaredbooker" data-embed-version="2" v-bind:data-pen-title="title" class="codepen" >See the Pen <a v-bind:href="link">{{ title }}</a> by Jared Booker (<a href="https://codepen.io/Jaredbooker">@Jaredbooker</a>) on <a href="https://codepen.io">CodePen</a>.</p>
   </div>
 </div>
 </template>
 
 <script>
+
 export default {
   props: ['title', 'col', 'link', 'hash'],
   name: 'Codepen-Card',
@@ -21,23 +22,27 @@ export default {
 
 <style lang="css">
 
+.loader {
+  position:absolute;
+  z-index:-1;
+  top:40%;
+  left:40%;
+}
+
 .card-illustration-2 {
-  background: #f2f2f2;
-  background-size: cover;
+  background: #fff;
+  /* background-image:url("./../../assets/JB2018.gif"); */
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position:center;
   background-origin: border-box;
   border-radius:10px;
   box-shadow:0px 3px 45px 9px rgba(0,0,0,.08);
   margin:2em 1vw;
   z-index:2;
   height:575px;
-  /* width:935px; */
   overflow:hidden;
 }
 
-.card-illustration-2:hover {
-  transition: 300ms;
-  transform: scale(1.02);
-    box-shadow:0px 3px 45px 9px rgba(0,0,0,.02);
-}
 
 </style>

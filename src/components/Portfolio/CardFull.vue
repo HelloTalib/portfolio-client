@@ -58,11 +58,6 @@ export default {
    z-index:2;
  }
 
-.card-illustration-3:hover {
-  transition: 300ms;
-  transform: scale(1.02);
-    box-shadow:0px 3px 45px 9px rgba(0,0,0,.02);
-}
 
  @-webkit-keyframes backgroundScroll {
      from {background-position: 0 0px;}

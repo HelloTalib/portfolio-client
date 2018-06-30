@@ -19,7 +19,7 @@
         origin: 'bottom',
         distance: '300px',
         mobile: false
-      }"/>/>
+      }"/>
   </div>
   </div>
   <Footer-Section/>

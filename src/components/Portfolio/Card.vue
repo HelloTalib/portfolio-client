@@ -54,12 +54,6 @@ export default {
   margin-bottom:5px;
 }
 
-.card:hover {
-  transition: 300ms;
-  transform: scale(1.02);
-    box-shadow:0px 3px 45px 9px rgba(0,0,0,.02);
-}
-
 .card-img {
   width:100%;
   cursor:pointer;
