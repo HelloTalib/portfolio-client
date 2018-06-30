@@ -27,16 +27,23 @@
 </template>
 
 <script>
+import axios from 'axios';
 import moment from 'moment';
 
 export default {
-  props: ['repositories'],
   name: 'Repository-Card',
   data() {
     return {
+      repositories: null,
       limit: 6
     }
   },
+  mounted(){
+    axios
+      .get('https://api.github.com/users/JBooker10/repos')
+      .then(res => this.repositories = res.data)
+      .catch(err => console.log(err))
+    },
   methods: {
     moment: function () {
         return moment();

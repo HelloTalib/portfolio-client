@@ -4,10 +4,6 @@
   <div class="container">
   <Page-Header title="Portfolio" icon="fa fa-folder-open" />
   <div class="row">
-    <div v-if="repositories === null">
-      <img src="./../../assets/JB2018.gif" class="spinner"/>
-    </div>
-    <div v-else>
     <Codepen-Card title="Wonder Woman Polygons"
                   col="seven columns"
                   link="https://codepen.io/Jaredbooker/pen/qVgjdo/"
@@ -20,8 +16,7 @@
                    distance: '100px',
                    mobile: false
                   }"/>
-    <Repository-Card   :repositories="repositories" 
-                       v-scroll-reveal.reset="{
+    <Repository-Card  v-scroll-reveal.reset="{
                            delay: 250,
                            duration: 1000,
                            scale: .8,
@@ -79,7 +74,6 @@
                                      mobile: false
                                     }"/>
     </div>
-    </div>
   </div>
 </div>
   <Footer-Section/>
@@ -87,7 +81,7 @@
 </template>
 
 <script>
-import axios from 'axios';
+
 
 import Navbar from '@/components/Navbar/Navbar'
 import PageHeader from '@/components/Page-Header/PageHeader'
@@ -102,16 +96,8 @@ export default {
   components: { Navbar, PageHeader, Card, CodepenCard, FooterSection, RepositoryCard, CardFull },
   data() {
     return {
-       repositories: null,
-        limit: 6
     }
-  },
-  mounted(){
-    axios
-      .get('https://api.github.com/users/JBooker10/repos')
-      .then(res => this.repositories = res.data)
-      .catch(err => console.log(err))
-    }
+  }
 }
 </script>
 
