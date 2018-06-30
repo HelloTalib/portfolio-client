@@ -10,7 +10,7 @@
             </span><i class="fa fa-clock-o" aria-hidden="true"></i>
           </span>
         </div>
-        <div class="list-group-item " v-for="(repo, i) in repositories.sort(( a, b) => {
+        <div class="list-group-item " v-for="(repo, i) in repositories.slice().sort(( a, b) => {
             return new Date(a.updated_at) - new Date(b.updated_at);
         }).reverse()" :key="repo.id"
         v-if="repositories && repositories.length > 0 && i <= limit">
@@ -27,23 +27,17 @@
 </template>
 
 <script>
-import axios from 'axios';
+
 import moment from 'moment';
 
 export default {
+  props: ['repositories'],
   name: 'Repository-Card',
   data() {
     return {
-      repositories: null,
       limit: 6
     }
   },
-  mounted(){
-    axios
-      .get('https://api.github.com/users/JBooker10/repos')
-      .then(res => this.repositories = res.data)
-      .catch(err => console.log(err))
-    },
   methods: {
     moment: function () {
         return moment();
@@ -62,8 +56,6 @@ export default {
     }
 }
   }
-
-
 }
 </script>
 
