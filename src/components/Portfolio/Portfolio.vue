@@ -1,5 +1,5 @@
 <template lang="html">
-  <div>
+  <div class="portfolio-scroll">
   <Navbar/>
   <div class="container">
   <Page-Header title="Portfolio" icon="fa fa-folder-open" />
@@ -120,5 +120,7 @@ export default {
   margin:25% auto;
 
 }
+
+
 
 </style>

@@ -5,7 +5,9 @@
     <div class="container">
       <div class="responsive-nav">
         <div class="navbar-brand">
-          <router-link class="navbar-link nav-home" v-bind:style="navlinkdark" to="/home">Jaredbookr</router-link>
+          <router-link class="" to="/home">
+            <NavbarLogo  v-bind:navbarColor="navbarColor"/>
+            </router-link>
         </div>
         <div class="toggle-menu active" id="navbarToggle"  @click="navbarScroll">
         <div id="nav-icon3" v-bind:class="[ isActive ? '' : 'open' ]" @click="">
@@ -32,9 +34,12 @@
 </template>
 
 <script>
+import NavbarLogo from './NavbarLogo';
+
 export default {
+  components: { NavbarLogo },
   name: 'Navbar',
-  props: ['navbardark', 'navlinkdark', 'navbarToggle'],
+  props: ['navbardark', 'navlinkdark', 'navbarToggle', 'navbarColor'],
   data() {
     return {
       isActive: true
@@ -79,6 +84,12 @@ export default {
     margin-bottom:1em;
 }
 
+.nav-home {
+  font-family: 'Rajdhani', sans-serif;
+  font-size:15px !important;
+  text-transform:none !important;
+}
+
 
 @media(max-width:750) {
   .toggle-menu {
@@ -90,7 +101,17 @@ export default {
     width: 97%;
   }
 
+  .icon-logo {
+    content: url('./../../assets/JB2019.svg');
+    margin-top:2em;
+    height:30px;
+  }
 
+    .icon-logo-dark {
+    content: url('./../../assets/JB2019.svg');
+    margin-top:2em;
+    height:30px;
+  }
 
   .navbar + .docs-section {
     border-top-width: 0; }
@@ -121,8 +142,8 @@ export default {
   }
 
   .navbar-brand {
-    position:absolute;
-    height:6.5rem;
+    position:absolute; 
+    /* height:6.5rem; */
     display:flex;
     align-items: center;
   }
@@ -203,7 +224,7 @@ display:none;
   height: 35px;
   position: relative;
   float:right;
-  margin-top: 1em;
+  margin-top: 1.5em;
   margin-right:1em;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);

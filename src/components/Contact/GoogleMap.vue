@@ -174,7 +174,7 @@ export default {
   {name: 'Styled Map'});
         const uluru = {lat: 41.8818, lng: -87.62317};
         const map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 12,
+          zoom: 13,
           center: uluru,
           mapTypeControlOptions: {
               mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain',

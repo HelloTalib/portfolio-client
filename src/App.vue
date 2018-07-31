@@ -13,7 +13,7 @@ import Intro from './components/Intro/Intro'
 export default {
   name: 'App',
   components: { Navbar, Home, Portfolio, Intro }
-}
+  }
 </script>
 
 <style>

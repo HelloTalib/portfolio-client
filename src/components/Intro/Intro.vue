@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import TweenLite from 'gsap';
+
 
 export default {
   name: 'intro',
@@ -21,35 +21,20 @@ export default {
     }
   },
   methods: {
-    getBrand: function(){
-      const parent = document.querySelector('.col-2')
-      const logo = document.createElement('img')
-      logo.src = require(`./../../assets/JB2019.svg`)
-      logo.height = 100
-      return parent.insertBefore(logo, null)
-    },
-    loader: function(){
-      return TweenLite.to(load, 3,  { width: '100%' })
-    },
+    
     loop: function() { return setInterval(() => {
         if(this.loading !== 0){
           return this.loading--
-        } else {
-          //return window.location.pathname = '/home'
-          //clearInterval(this.getBrand())
-        }
+        } 
       }, 200)},
     countdown: function(){
       const countdown = document.getElementById('countdown')
        let num = countdown.innerHTML
         this.loop()
-        this.loader()
   }
 },
   mounted(){
     this.countdown()
-
-    TweenLite.to('.img-logo-2', 1, {delay:2, opacity:0 })
     setTimeout(() => this.$router.push({ name: 'home' }), 3000)
   },
 }
