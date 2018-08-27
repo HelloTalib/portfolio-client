@@ -111,7 +111,7 @@ export default {
 <style lang="css">
 
 .m-1 {
-  padding:1em;
+  padding:2em 2em;
 }
 
 

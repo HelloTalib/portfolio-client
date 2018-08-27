@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="five columns">
+  <div class="five columns github-card">
     <div class="card-illustration-3">
       <div class="list-group">
         <div class="list-group-item ">
@@ -18,7 +18,7 @@
             <span class="card-header-left">
               <h6>{{ repo.name }}</h6>
               <small><p class="p-header color-update">{{ repo.language}}</p></small>
-            </span><span class="">{{ repo.updated_at | moment }}</span>
+            </span><span class="small">{{ repo.updated_at | moment }}</span>
           </span></a>
         </div>
       </div>
@@ -65,8 +65,11 @@ export default {
   background-size: cover;
   background-origin: border-box;
   border-radius:10px;
-  box-shadow:0px 3px 45px 9px rgba(0,0,0,.08);
+  box-shadow:none !important;
+  /* border:1px solid rgba(194, 194, 194, 0.3); */
+  /* box-shadow:0px 3px 45px 9px rgba(59, 59, 59, 0.05); */
   margin:2em 1vw;
+  min-width:320px;
   z-index:2;
   /* width:935px; */
   overflow:hidden;
@@ -75,21 +78,27 @@ export default {
 .default, .default:hover {
   text-decoration: none;
   color:inherit;
-
 }
 
+.small {
+  font-size:11px;
+  color:#888;
+}
 
 h5 {
-  font-weight:600;
-  color:white;
+  font-weight:100;
+  font-size:1.25em;
+  color:#ccc;
+  /* color:white; */
 }
 
 h6 {
   font-weight: lighter;
 }
 
-.clock {
-  font-size:1em !important
+.fa-clock-o {
+  font-size:1.25em !important;
+  padding-right:1.25em;
 }
 
 .group-block {
@@ -100,12 +109,14 @@ h6 {
   flex:1;
 }
 
-.group-date {
-
+.github-card {
+  display:flex;
+  align-content:center;
+  justify-content: center;
 }
 
 .color {
-  color:rgba(255,255,255,.6) !important;
+  color:#888 !important;
 }
 
 .time {
@@ -157,24 +168,31 @@ small {
 }
 
 .list-group-item:first-child {
+  /* filter:invert(10%); */
+  padding:.75em 1em;
   /* border:none; */
-  background: linear-gradient(86deg, rgba(30,12,62,1) 0%, rgba(244,62,88,1) 71%);
+  border:none;
+  /* background:#cccccc; */
+  /* background: linear-gradient(86deg, rgba(30,12,62,1) 0%, rgba(244,62,88,1) 71%); */
 }
 
 .list-group-item {
   position: relative;
   display: block;
-  padding: 0.5rem 2rem;
+  padding: 0.35rem 2rem;
   margin-bottom: -1px;
-  background-color: #111;
-  border: 1px solid rgba(255, 255, 255, .14);
+  background-color: rgb(57,57,57);
+  border: 1px solid rgba(114, 114, 114, 0.2);
   border-left:none;
   border-right:none;
-  color:white !important;
+  color:rgb(235, 235, 235) !important;
+   
 }
 
 .list-group-item:hover{
-  background: linear-gradient(86deg, rgba(30,12,62,1) 0%, rgba(244,62,88,1) 71%);
+ filter:invert(100%);
+  /* background: linear-gradient(86deg, rgba(30,12,62,1) 0%, rgba(244,62,88,1) 71%); */
+  color:#fff;
 }
 
 

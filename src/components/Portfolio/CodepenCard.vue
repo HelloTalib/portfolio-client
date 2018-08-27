@@ -37,7 +37,7 @@ export default {
   background-position:center;
   background-origin: border-box;
   border-radius:10px;
-  box-shadow:0px 3px 45px 9px rgba(0,0,0,.08);
+  /* box-shadow:0px 3px 45px 9px rgba(0,0,0,.08); */
   margin:2em 1vw;
   z-index:2;
   height:575px;

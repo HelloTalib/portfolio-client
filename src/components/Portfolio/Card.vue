@@ -2,18 +2,21 @@
   <div class="six columns">
     <div class="card">
       <a v-bind:href="link" target="_blank">
-      <img :src="getImg(img)" class="card-img"/>
+      <!-- <img :src="getImg(img)" class="card-img"/> -->
       </a>
       <div class="card-body">
         <span class="card-flex">
           <span class="card-header-left">
             <h4>{{ title }}</h4>
             <small><p class="p-header">{{ stack }}</p></small>
-          </span><a  v-bind:href="github" target="_blank"><i class="fa fa-github card-link" aria-hidden="true"></i></a>
+          </span>
+          <a  v-bind:href="github" target="_blank"><i class="fa fa-github card-link" aria-hidden="true"></i></a>
+           
           </span>
           <span class="card-p">
             {{ description }}
-            </span>
+            </span><br>
+                 <a  :href="link"  target="_blank" class="button float">View Project</a>
       </div>
     </div>
   </div>
@@ -44,8 +47,10 @@ export default {
   height:auto;
   border-radius:10px;
   margin:2em 1vw;
-  box-shadow:0px 3px 45px 9px rgba(0,0,0,.08);
-  background:white;
+  border:1px solid #f2f2f2;
+  /* box-shadow:0px 3px 45px 9px rgba(0,0,0,.08); */
+  /* background:rgb(32, 32, 32); */
+  background:#fff;
   overflow:hidden;
 }
 .card-flex {
@@ -54,9 +59,17 @@ export default {
   margin-bottom:5px;
 }
 
+h4 {
+  font-size:1.5em;
+  /* color:#f4f4f4; */
+}
+
+
 .card-img {
   width:100%;
   cursor:pointer;
+  /* filter:invert(100%); */
+  filter:brightness(125%);
   z-index:-2;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -74,6 +87,12 @@ export default {
   color:#888;
 }
 
+.float {
+  float:right;
+  margin-top:2em;
+  margin-bottom:2em;
+}
+
 .card-img:hover{
   filter:none;
 }
@@ -87,6 +106,7 @@ export default {
 .card-link {
   margin:.33em 0 !important;
   font-size:1.4em !important;
+  /* color:#f4f4f4 !important; */
   color: #181818 !important;
 }
 

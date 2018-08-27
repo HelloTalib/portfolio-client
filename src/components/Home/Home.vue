@@ -9,7 +9,6 @@
       <h1 class="ml4">
       <span class="letters letters-1">Designer</span>
       <span class="letters letters-2">Developer</span>
-      <span class="letters letters-3">Marketer</span>
       <svg class="logo2" height="260" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 476.62 367.57"><defs><linearGradient id="logo-gradient" x1="50%" y1="0%" x2="50%" y2="100%" >
 
                   <stop offset="0%" stop-color="#FF001C">
@@ -99,18 +98,6 @@ export default {
         duration: ml4.durationIn
       }).add({
         targets: '.ml4 .letters-2',
-        opacity: 0,
-        scale: ml4.scaleOut,
-        duration: ml4.durationOut,
-        easing: "easeInExpo",
-        delay: ml4.delay
-      }).add({
-        targets: '.ml4 .letters-3',
-        opacity: ml4.opacityIn,
-        scale: ml4.scaleIn,
-        duration: ml4.durationIn
-      }).add({
-        targets: '.ml4 .letters-3',
         opacity: 0,
         scale: ml4.scaleOut,
         duration: ml4.durationOut,

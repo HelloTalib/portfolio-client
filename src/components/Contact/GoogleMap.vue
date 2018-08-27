@@ -175,6 +175,12 @@ export default {
         const uluru = {lat: 41.8818, lng: -87.62317};
         const map = new google.maps.Map(document.getElementById('map'), {
           zoom: 13,
+          zoomControl: false,
+          mapTypeControl: false,
+          scaleControl: false,
+          streetViewControl: false,
+          rotateControl: false,
+          fullscreenControl: false,
           center: uluru,
           mapTypeControlOptions: {
               mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain',
@@ -205,10 +211,10 @@ export default {
   background-size: cover;
   background-origin: border-box;
   border-radius:10px;
-  box-shadow:0px 3px 45px 9px rgba(0,0,0,.08);
-  margin:2em 0vw;
+  /* box-shadow:0px 3px 45px 9px rgba(0,0,0,.08); */
+  margin:2em 0;
   z-index:2;
-  height:460px;
+  height:430px;
   /* width:935px; */
   overflow:hidden;
 }
