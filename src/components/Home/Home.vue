@@ -41,19 +41,19 @@ export default {
   data(){
     return {
       navbardark: {
-        background:'#111 !important',
+        background:'transparent !important',
         border:'none !important'
       },
       navlinkdark: {
-        color: '#aaa !important'
+        color: 'rgba(255,255,255,.8) !important'
       },
       footerdark: {
-        background:'#111 !important',
+        background:'transparent !important',
         border: 'none !important',
         margin: '0 !important'
       },
       icondark: {
-        color:'rgba(255,255,255,.5) !important'
+        color:'rgba(255,255,255,.7) !important'
       },
       marginsdark: {
         marginTop: '0px !important'
@@ -62,7 +62,7 @@ export default {
         background: '#aaa'
       },
       navbarColor: {
-        fill:"rgba(255,255,255,.7) !important"
+        fill:"rgba(255,255,255,.8) !important"
       }
     }
   },
@@ -119,14 +119,7 @@ export default {
 
 
 
-/* h1 {
-  font-size:4em;
-font-weight:500;
-margin:4em;
-color:#fff;
-font-family: 'Rajdhani', sans-serif;
-  font-family: 'Pontano Sans', sans-serif;
-} */
+
 
 
 .ml4 {
@@ -145,16 +138,25 @@ font-family: 'Rajdhani', sans-serif;
   right: 0;
   opacity: 0; 
   color:rgba(255,255,255,.85);
+  /* background: linear-gradient(270deg, #FF001C 20%,#0c1053 80%); */
+  /* -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
 }
 
 .home-background {
-   background:#111;
+  /* background-image: radial-gradient(circle at top right, #141414, #101010, #0b0b0b, #060606, #000000); */
+  background:rgb(15, 15, 15);
+  /* background-image: radial-gradient(circle at top right, #f81d43, #fa1538, #fb0d2b, #fb071d, #fb0707); */
   overflow:hidden;
 }
 
+
+
 .logo-home{
   stroke:url(#logo-gradient);
+  /* stroke:rgba(255,255,255,.85); */
   fill:transparent;
+ 
   stroke-width:2px;
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;

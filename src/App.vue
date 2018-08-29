@@ -17,6 +17,8 @@ export default {
 </script>
 
 <style>
+
+@import url('https://fonts.googleapis.com/css?family=Pontano+Sans');
 @import './normalize.css';
 @import './skeleton.css';
 </style>

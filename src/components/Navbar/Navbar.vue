@@ -20,7 +20,7 @@
       </div>
     </div>
         <ul class="navbar-list">
-          <li class="navbar-item"><router-link class="navbar-link" v-bind:style="navlinkdark" to="/home">Home</router-link></li>
+          <li class="navbar-item"><router-link class="navbar-link" v-bind:style="navlinkdark" to="/">Home</router-link></li>
           <li class="navbar-item"><router-link class="navbar-link" v-bind:style="navlinkdark" to="/portfolio">Portfolio</router-link></li>
           <li class="navbar-item">
             <router-link class="navbar-link" v-bind:style="navlinkdark" to="/contact">Contact</router-link>
