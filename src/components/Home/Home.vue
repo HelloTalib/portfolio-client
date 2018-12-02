@@ -42,14 +42,14 @@ export default {
     return {
       navbardark: {
         background:'transparent !important',
-        border:'none !important'
+        border:'1px solid rgba(35,35,35,.15)'
       },
       navlinkdark: {
         color: 'rgba(255,255,255,.8) !important'
       },
       footerdark: {
         background:'transparent !important',
-        border: 'none !important',
+        borderTop: '1px solid rgba(35,35,35,.15)',
         margin: '0 !important'
       },
       icondark: {
@@ -148,6 +148,7 @@ export default {
   background:rgb(15, 15, 15);
   /* background-image: radial-gradient(circle at top right, #f81d43, #fa1538, #fb0d2b, #fb071d, #fb0707); */
   overflow:hidden;
+  height: 100vh;
 }
 
 

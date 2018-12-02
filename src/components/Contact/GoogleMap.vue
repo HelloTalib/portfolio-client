@@ -215,7 +215,6 @@ export default {
   margin:2em 0;
   z-index:2;
   height:430px;
-  /* width:935px; */
   overflow:hidden;
 }
 

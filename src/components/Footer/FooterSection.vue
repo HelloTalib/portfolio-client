@@ -44,12 +44,12 @@ footer {
   padding:10px;
   background:#fcfcfc;
   /* background:url('./assets/okay2.png'); */
-  border-top:1px solid rgba(0,0,0,.15);
+  border-top:1px solid rgba(0,0,0,.05);
 }
 .copyright-footer, p {
   text-align: center;
   margin:0;
-  font-size:1em;
+  font-size:.95em;
   color: #181818;
 }
 .copyright-footer a {

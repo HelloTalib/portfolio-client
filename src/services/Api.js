@@ -1,10 +1,10 @@
-import axios from 'axios'
+import axios from "axios";
 
 // `http://localhost:80`
 //http://jaredbookr.io
 
-export default() => {
+export default () => {
   return axios.create({
-    baseURL: `http://jaredbookr.io`
-  })
-}
+    baseURL: `http://localhost:8080`
+  });
+};

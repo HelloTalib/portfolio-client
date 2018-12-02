@@ -126,6 +126,7 @@ export default {
 }
 .card-p {
   color:#888;
+
 }
 
 .card-link-full {

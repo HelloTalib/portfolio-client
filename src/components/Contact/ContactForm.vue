@@ -31,8 +31,8 @@
                placeholder="123-456-7890">
       </div>
       <div class="one-half column">
-        <label for="reason">Reason for contacting</label>
-        <select class="u-full-width" name="reason" v-model="reason">
+        <label for="contact_reason">Reason for contacting</label>
+        <select class="u-full-width" name="contact_reason" v-model="contact_reason">
          <option value="Question" >Question</option>
          <option value="Recruitment">Recruitment</option>
          <option value="Freelance">Freelance</option>
@@ -61,7 +61,7 @@ export default {
       name: null,
       email: null,
       phone: null,
-      reason: null,
+      contact_reason: null,
       message: null,
     }
   },
@@ -81,7 +81,7 @@ export default {
       return (this.name = null,
               this.email = null,
               this.phone = null,
-              this.reason = null,
+              this.contact_reason = null,
               this.message = null)
     },
     removeNotify(){
@@ -92,16 +92,18 @@ export default {
     },
     async addContact(e) {
       e.preventDefault()
-      await PostsService.addContact({
+      const data = {
         name: this.name,
         email: this.email,
         phone: this.phone,
-        reason: this.reason,
-        message: this.message,
-      })
-      this.notify("Your message has been sent!")
-      this.$router.push({name: 'contact'})
-      this.clear()
+        contact_reason: this.contact_reason,
+        message: this.message
+      }
+      await PostsService.addContact(data)
+      console.log(data)
+      // this.notify("Your message has been sent!")
+      // this.$router.push({name: 'contact'})
+      // this.clear()
     },
 
   }
@@ -128,7 +130,7 @@ export default {
 }
 
 .button-primary {
-  background: linear-gradient(45deg, rgba(30,12,62,1) 0%, rgba(255,76,76,1) 73%);
+  background-image: linear-gradient(to right top, #ff5f5f, #fe5757, #fd4f4f, #fc4746, #fa3e3e);
   border:none !important;
   border-radius:20px !important;
   float: right;

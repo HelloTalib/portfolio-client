@@ -8,12 +8,12 @@
   </div>
   <div v-else>
   <div class="row">
-       <Card title="Financial Markets"
+       <Card title="Financial Markets Dashboard"
             stack="Express | Vue | RxJS | ChartJS"
             img="mockup.png"
             github="https://github.com/JBooker10/financial-markets"
             link="https://shrouded-atoll-68868.herokuapp.com/#/"
-            description="A light-weight reactive stock market web app using ExpressJS, VueJS,
+            description="A light-weight reactive analytics dashboard using ExpressJS, VueJS,
             and RXJS Observables  to stream and analyze real-time stock data on companies from the IEX trading API."
             v-scroll-reveal.reset="{
               delay: 250,

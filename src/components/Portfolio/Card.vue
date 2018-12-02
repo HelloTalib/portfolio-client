@@ -13,9 +13,9 @@
           <a  v-bind:href="github" target="_blank"><i class="fa fa-github card-link" aria-hidden="true"></i></a>
            
           </span>
-          <span class="card-p">
+          <p class="card-p">
             {{ description }}
-            </span><br>
+            </p><br>
                  <a  :href="link"  target="_blank" class="button float">View Project</a>
       </div>
     </div>
@@ -79,17 +79,19 @@ h4 {
 .p-header {
   padding:0;
   text-align:left;
-  margin-top:-27px;
+  margin-top:-25px;
   color: #888;
+  font-family: Helvetica, Sans-Serif;
 }
 
-.card-p {
+p.card-p {
   color:#888;
+  text-align:left;
 }
 
 .float {
   float:right;
-  margin-top:2em;
+  margin-top:0;
   margin-bottom:2em;
 }
 
@@ -99,8 +101,11 @@ h4 {
 .card-body{
   margin:2em 2em;
 }
-.card-p {
+
+p.card-p {
   color:#888;
+
+  
 }
 
 .card-link {
