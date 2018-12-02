@@ -7,7 +7,7 @@ RUN apk add --update nginx nodejs
 # Create the directories we will need
 RUN mkdir -p /tmp/nginx/client
 RUN mkdir -p /var/log/nginx
-RUN mkdir -p/var/www/html
+RUN mkdir -p /var/www/html
 
 # Copy the respective nginx configuration files
 COPY nginx_config/nginx.conf /etc/nginx/nginx.conf
