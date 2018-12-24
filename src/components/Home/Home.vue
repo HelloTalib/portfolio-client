@@ -205,8 +205,7 @@ export default {
   },
   destroyed() {
     this.controls.enableZoom = false;
-
-    console.log("destroyed");
+    this.controls.enabled = false;
   }
 };
 </script>
