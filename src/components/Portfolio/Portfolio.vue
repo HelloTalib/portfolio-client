@@ -107,65 +107,70 @@
 </template>
 
 <script>
-import axios from 'axios';
-import Navbar from '@/components/Navbar/Navbar'
-import PageHeader from '@/components/Page-Header/PageHeader'
-import Card from '@/components/Portfolio/Card'
-import CodepenCard from '@/components/Portfolio/CodepenCard'
-import FooterSection from '@/components/Footer/FooterSection'
-import RepositoryCard from '@/components/Portfolio/RepositoryCard'
-import CardFull from '@/components/Portfolio/CardFull'
+import axios from "axios";
+import { page } from "vue-analytics";
+import Navbar from "@/components/Navbar/Navbar";
+import PageHeader from "@/components/Page-Header/PageHeader";
+import Card from "@/components/Portfolio/Card";
+import CodepenCard from "@/components/Portfolio/CodepenCard";
+import FooterSection from "@/components/Footer/FooterSection";
+import RepositoryCard from "@/components/Portfolio/RepositoryCard";
+import CardFull from "@/components/Portfolio/CardFull";
 
 export default {
-  name: 'portfolio',
-  components: { Navbar, PageHeader, Card, CodepenCard, FooterSection, RepositoryCard, CardFull },
+  name: "portfolio",
+  components: {
+    Navbar,
+    PageHeader,
+    Card,
+    CodepenCard,
+    FooterSection,
+    RepositoryCard,
+    CardFull
+  },
   data() {
     return {
-      repositories: [],
+      repositories: []
+    };
+  },
+  methods: {
+    track() {
+      page("/portfolio");
     }
   },
-   mounted(){
+  mounted() {
     axios
-      .get('https://api.github.com/users/JBooker10/repos')
-      .then(res => this.repositories = res.data)
-      .catch(err => console.log(err))
-    }
-}
+      .get("https://api.github.com/users/JBooker10/repos")
+      .then(res => (this.repositories = res.data))
+      .catch(err => console.log(err));
+  }
+};
 
-  // <Repository-Card :repositories="repositories"
-  //                         v-scroll-reveal.reset="{
-  //                          delay: 250,
-  //                          duration: 500,
-  //                          scale: .8,
-  //                          origin: 'bottom',
-  //                          distance: '100px',
-  //                          mobile: false
-  //                         }"/>
-
-
-
-
+// <Repository-Card :repositories="repositories"
+//                         v-scroll-reveal.reset="{
+//                          delay: 250,
+//                          duration: 500,
+//                          scale: .8,
+//                          origin: 'bottom',
+//                          distance: '100px',
+//                          mobile: false
+//                         }"/>
 </script>
 
 <style lang="css">
-
 .spinner {
-  display:block;
-  margin:25% auto;
-
+  display: block;
+  margin: 25% auto;
 }
 
 .frame {
-  height:600px;
-  border:none;
-  border-radius:1em;
+  height: 600px;
+  border: none;
+  border-radius: 1em;
   overflow: hidden;
 }
 
 .filt {
   filter: brightness(120%);
 }
-
-
-
 </style>

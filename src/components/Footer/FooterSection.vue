@@ -14,21 +14,21 @@
 
 <script>
 export default {
-  props: ['footerdark', 'icondark', 'marginsdark'],
-  name: 'footer-section'
-}
+  props: ["footerdark", "icondark", "marginsdark"],
+  name: "footer-section"
+};
 </script>
 
 <style lang="css">
 footer {
-  margin-top:4em;
-  width:100%;
-  bottom:0;
+  margin-top: 4em;
+  width: 100%;
+  bottom: 0;
 }
 
 .footer-icons {
-  padding:4%;
-  padding-top:0px;
+  padding: 4%;
+  padding-top: 0px;
 }
 
 .link {
@@ -36,23 +36,24 @@ footer {
 }
 
 .footer-icon {
-  color:#000;
-  font-size:1.4em !important;
-  padding:2px;
+  color: #000;
+  font-size: 1.4em !important;
+  padding: 2px;
 }
-.copyright-footer{
-  padding:10px;
-  background:#fcfcfc;
+.copyright-footer {
+  padding: 10px;
+  background: #fcfcfc;
   /* background:url('./assets/okay2.png'); */
-  border-top:1px solid rgba(0,0,0,.05);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
-.copyright-footer, p {
+.copyright-footer,
+p {
   text-align: center;
-  margin:0;
-  font-size:.95em;
+  margin: 0;
+  font-size: 0.95em;
   color: #181818;
 }
 .copyright-footer a {
-  color:#ccc;
+  color: #ccc;
 }
 </style>
