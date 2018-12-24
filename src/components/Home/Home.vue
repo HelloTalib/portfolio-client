@@ -135,7 +135,6 @@ export default {
       this.renderer.render(this.scene, this.camera);
       requestAnimationFrame(this.animate);
     },
-
     track() {
       page("/");
     }
