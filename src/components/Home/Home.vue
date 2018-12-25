@@ -89,8 +89,7 @@ export default {
       this.material = new THREE.MeshBasicMaterial({
         color: 0x000000,
         wireframe: true,
-        wireframeLinewidth: 3,
-        wireframeLinecap: "round"
+        wireframeLinewidth: 0.5
       });
       var url =
         "https://res.cloudinary.com/jaredbookr/raw/upload/v1545598692/5dlogo.stl";
@@ -115,7 +114,7 @@ export default {
       this.controls = new this.OrbitControls(this.camera);
       this.controls.enableZoom = true;
       this.controls.enablePan = false;
-      this.controls.maxDistance = 3;
+      this.controls.maxDistance = 2.2;
       this.controls.enableDamping = true;
       this.controls.dampingFactor = 0.5;
       this.controls.rotateSpeed = 0.5;
@@ -145,8 +144,8 @@ export default {
     ml4.scaleIn = [0.2, 1];
     ml4.scaleOut = 3;
     ml4.durationIn = 500;
-    ml4.durationOut = 500;
-    ml4.delay = 1000;
+    ml4.durationOut = 1000;
+    ml4.delay = 700;
 
     anime
       .timeline({ loop: false })
@@ -240,9 +239,13 @@ canvas {
   right: 0;
   opacity: 0;
   color: rgba(255, 255, 255, 0.85);
+  background: linear-gradient(270deg, #fd3d3d 30%, #1c2072 70%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  border: 10px inset transparent;
 }
 
-.letters-1 {
+/* .letters-1 {
   background: linear-gradient(270deg, #fd1f39 30%, #101461 70%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
@@ -252,7 +255,7 @@ canvas {
   background: linear-gradient(270deg, #101461 30%, #fd1f39 70%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
-}
+} */
 
 .home-background {
   /* background-image: radial-gradient(circle at top right, #141414, #101010, #0b0b0b, #060606, #000000); */
