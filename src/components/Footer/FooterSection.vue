@@ -2,7 +2,7 @@
   <div>
   <footer class="js-section3" id="footer" v-bind:style="marginsdark">
   <div class="copyright-footer" v-bind:style="footerdark">
-      <p class="footer-text" v-bind:style="icondark"> &copy 2018 <a class="link" href="http://jaredbookr.io">Jaredbookr</a> | built and designed by: Jared Booker </p>
+      <p class="footer-text" v-bind:style="icondark"> &copy {{ new Date().getFullYear() }} <a class="link" href="http://jaredbookr.io">Jaredbookr</a> | built and designed by: Jared Booker </p>
       <p>  <a href="https://github.com/JBooker10" target="_blank"><i class="fa fa-github footer-icon" aria-hidden="true" v-bind:style="icondark"></i></a>
        <a href="https://www.linkedin.com/in/jaredbooker1/" target="_blank"><i class="fa fa-linkedin footer-icon" aria-hidden="true" v-bind:style="icondark"></i></a>
        <a href="https://codepen.io/Jaredbooker/" target="_blank"><i class="fa fa-codepen footer-icon" aria-hidden="true" v-bind:style="icondark"></i></a>
